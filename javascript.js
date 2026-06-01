@@ -24,3 +24,7 @@ function getHumanChoice () {
     // Return the choice
     return (choice);
 }
+
+humanScore = 0;
+
+computerScore = 0;
