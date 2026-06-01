@@ -7,14 +7,14 @@ function getComputerChoice () {
     // If the value is less than 34
         if (x < 34) {
         // Return "Rock"
-            return ("Rock")
+            return ("rock")
     // Else if the value is less than 67
         } else if (x < 67) {
         // Return "Paper"
-            return ("Paper")
+            return ("paper")
         // Else return "Scissors"
         } else {
-            return ("Scissors")
+            return ("scissors")
         }        
 }
 
