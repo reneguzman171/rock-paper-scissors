@@ -6,7 +6,7 @@ function getComputerChoice () {
     x = 
         // Calculates a random number from 1 - 99
     Math.floor(Math.random() * 99) + 1;
-    
+
     // If the value is less than 34
         if (x < 34) {
         // Return "Rock"
@@ -19,4 +19,11 @@ function getComputerChoice () {
         } else {
             return ("scissors")
         }        
+}
+
+// When a user inputs a choice
+function getHumanChoice () {
+    let choice = prompt('Rock, Paper, or Scissors?', '');
+    // Return the choice
+    return (choice)
 }
