@@ -14,7 +14,7 @@ function getComputerChoice () {
             return ("Paper")
         // Else return "Scissors"
         } else {
-            return ("scissors")
+            return ("Scissors")
         }        
 }
 
