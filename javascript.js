@@ -1,6 +1,3 @@
-console.log("Hello World!")
-
-
 function getComputerChoice () {
     // Initialize a variable that
     x = 
