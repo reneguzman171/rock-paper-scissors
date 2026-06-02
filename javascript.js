@@ -59,20 +59,17 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 
-    // announces the winner
+    // announces the winner and increments the score
     if (winner === 'human') {
         console.log(`You win! ${normalizedHumanChoice} beats ${computerChoice}!`);
+
+        humanScore++;        
     } else if (winner === 'computer') {
         console.log(`You lose! ${computerChoice} beats ${normalizedHumanChoice}!`);
+
+        computerScore++;
     } else if (winner === 'tie') {
         console.log(`It's a tie!`);
-    }
-    
-    // increment score
-    if (winner === 'human') {
-        humanScore++;
-    } else if (winner === 'computer') {
-        computerScore++;
     }
 }
 
