@@ -38,7 +38,7 @@ function playRound(humanChoice, computerChoice) {
         } else if (computerChoice === 'paper') {
             winner = 'computer';
         } else {
-            winner = 'human'
+            winner = 'human';
         }
     } else if (normalizedHumanChoice === 'paper') {
         if (computerChoice === 'rock') {
@@ -46,7 +46,7 @@ function playRound(humanChoice, computerChoice) {
         } else if (computerChoice === 'paper') {
             winner = 'tie';
         } else {
-            winner = 'computer'
+            winner = 'computer';
         }
     } else if (normalizedHumanChoice === 'scissors') {
         if (computerChoice === 'rock') {
