@@ -32,6 +32,7 @@ function playRound(humanChoice, computerChoice) {
 
     let winner = 0;
     
+    // Checks who won
     if (normalizedHumanChoice === 'rock') {
         if (computerChoice === 'rock') {
             winner = 'tie';
@@ -58,6 +59,7 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 
+    // announces the winner
     if (winner === 'human') {
         console.log(`You win! ${normalizedHumanChoice} beats ${computerChoice}!`);
     } else if (winner === 'computer') {
