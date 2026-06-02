@@ -1,8 +1,6 @@
 function getComputerChoice () {
-    // Initialize a variable that
-    x = 
-        // Calculates a random number from 1 - 99
-    Math.floor(Math.random() * 99) + 1;
+    // Initialize a variable that calculates a random number from 1 - 99
+    x = Math.floor(Math.random() * 99) + 1;
 
     // If the value is less than 34
     if (x < 34) {
