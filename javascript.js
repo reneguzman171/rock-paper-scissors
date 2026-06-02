@@ -67,6 +67,13 @@ function playRound(humanChoice, computerChoice) {
     } else if (winner === 'tie') {
         console.log(`It's a tie!`);
     }
+    
+    // increment score
+    if (winner === 'human') {
+        humanScore++;
+    } else if (winner === 'computer') {
+        computerScore++;
+    }
 }
 
 // const humanSelection = getHumanChoice;
