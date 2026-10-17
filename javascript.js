@@ -71,12 +71,6 @@ function playGame() {
             console.log(`It's a tie!`);
         }
     }
-
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
     
     console.log(`Final score is: Human - ${humanScore} Computer - ${computerScore}`)
 }
