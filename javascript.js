@@ -68,7 +68,14 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // Create node list containing the three player choices
+const humanChoices = document.querySelectorAll("button")
 // Iterate through each button
+humanChoices.forEach((button) => {
 // Add a 'click' listener for each button then
-// Pass the 'playRound' function to the listener then
+    button.addEventListener("click", () => {
+// Run 'playRound' function when a button is clicked
 // Pass the human and computer choices into the 'playRound' function
+        playRound(button.id, getComputerChoice());
+        console.log(`humanChoice = ${button.id}`);
+    });
+})
