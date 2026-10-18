@@ -16,6 +16,7 @@ function getComputerChoice () {
     }
 }
 
+const results = document.querySelector("#Results");
 let humanScore = 0;
 let computerScore = 0;
 
@@ -50,16 +51,20 @@ function playRound(humanChoice, computerChoice) {
             winner = 'tie';
         }
     }
-
+    // Define variable that creates a new paragraph
+    const newP = document.createElement("p");
     // announces the winner and increments the score
     if (winner === 'human') {
-        console.log(`You win! ${normalizedHumanChoice} beats ${computerChoice}!`);
+        results.appendChild(newP);
+        newP.textContent = `You win! ${normalizedHumanChoice} beats ${computerChoice}!`;
         humanScore++;        
     } else if (winner === 'computer') {
-        console.log(`You lose! ${computerChoice} beats ${normalizedHumanChoice}!`);
+        results.appendChild(newP);
+        newP.textContent = `You lose! ${computerChoice} beats ${normalizedHumanChoice}!`;
         computerScore++;
     } else if (winner === 'tie') {
-        console.log(`It's a tie!`);
+        results.appendChild(newP);
+        newP.textContent = `It's a tie!`;
     }
 }
 
