@@ -66,3 +66,9 @@ function playRound(humanChoice, computerChoice) {
         console.log(`It's a tie!`);
     }
 }
+
+// Create node list containing the three player choices
+// Iterate through each button
+// Add a 'click' listener for each button then
+// Pass the 'playRound' function to the listener then
+// Pass the human and computer choices into the 'playRound' function
