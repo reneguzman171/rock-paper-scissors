@@ -16,6 +16,10 @@ function getComputerChoice () {
     }
 }
 
+let humanScore = 0;
+let computerScore = 0;
+let scores = [humanScore, computerScore];
+
 function playRound(humanChoice, computerChoice) {
     const normalizedHumanChoice = humanChoice.toLowerCase(0);
 
