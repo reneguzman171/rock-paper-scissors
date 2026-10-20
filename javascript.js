@@ -81,9 +81,6 @@ function playRound(humanChoice, computerChoice) {
         while (results.firstChild) {
             results.removeChild(results.firstChild);
         }
-        while (results.firstChild) {
-            results.removeChild(results.firstChild);
-        }
         results.appendChild(newP);
         newP.textContent = `It's a tie!`;
     }
