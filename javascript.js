@@ -17,6 +17,7 @@ function getComputerChoice () {
 }
 
 const results = document.querySelector("#Results");
+
 let humanScore = 0;
 const humanScoreDisplay = document.querySelector(".human-display");
 humanScoreDisplay.textContent = `${humanScore}`;
