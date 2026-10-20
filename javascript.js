@@ -5,14 +5,14 @@ function getComputerChoice () {
     // If the value is less than 34
     if (x < 34) {
     // Return "Rock"
-        return ("rock")
+        return ("Rock")
     // Else if the value is less than 67
     } else if (x < 67) {
     // Return "Paper"
-        return ("paper")
+        return ("Paper")
     // Else return "Scissors"
     } else {
-        return ("scissors")
+        return ("Scissors")
     }
 }
 
@@ -21,31 +21,29 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-    const normalizedHumanChoice = humanChoice.toLowerCase(0);
-
     let winner = 0;
     
     // Checks who won
-    if (normalizedHumanChoice === 'rock') {
-        if (computerChoice === 'rock') {
+    if (humanChoice === 'Rock') {
+        if (computerChoice === 'Rock') {
             winner = 'tie';
-        } else if (computerChoice === 'paper') {
+        } else if (computerChoice === 'Paper') {
             winner = 'computer';
         } else {
             winner = 'human';
         }
-    } else if (normalizedHumanChoice === 'paper') {
-        if (computerChoice === 'rock') {
+    } else if (humanChoice === 'Paper') {
+        if (computerChoice === 'Rock') {
             winner = 'human';
-        } else if (computerChoice === 'paper') {
+        } else if (computerChoice === 'Paper') {
             winner = 'tie';
         } else {
             winner = 'computer';
         }
-    } else if (normalizedHumanChoice === 'scissors') {
-        if (computerChoice === 'rock') {
+    } else if (humanChoice === 'Scissors') {
+        if (computerChoice === 'Rock') {
             winner = 'computer';
-        } else if (computerChoice === 'paper') {
+        } else if (computerChoice === 'Paper') {
             winner = 'human';
         } else {
             winner = 'tie';
@@ -56,11 +54,11 @@ function playRound(humanChoice, computerChoice) {
     // announces the winner and increments the score
     if (winner === 'human') {
         results.appendChild(newP);
-        newP.textContent = `You win! ${normalizedHumanChoice} beats ${computerChoice}!`;
+        newP.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
         humanScore++;        
     } else if (winner === 'computer') {
         results.appendChild(newP);
-        newP.textContent = `You lose! ${computerChoice} beats ${normalizedHumanChoice}!`;
+        newP.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
         computerScore++;
     } else if (winner === 'tie') {
         results.appendChild(newP);
