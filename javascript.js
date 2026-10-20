@@ -87,6 +87,25 @@ function playRound(humanChoice, computerChoice) {
         results.appendChild(newP);
         newP.textContent = `It's a tie!`;
     }
+
+    // Check to see if the player or computer has reached 5 scores and
+    // Announce the winner of the match
+    if (humanScore == 5 || computerScore == 5) {
+        const matchResult = document.createElement("p");
+        results.appendChild(matchResult);
+        
+        if (humanScore == 5) {
+            matchResult.textContent =
+                `Congrats! You've beaten the computer ${humanScore} - ${computerScore}! Want to play again?`;
+        } else {
+            matchResult.textContent =
+                `Better luck next time. You've lost to the computer ${humanScore} - ${computerScore}! Think you can do better?`;
+        }
+
+        // Reset scores
+        humanScore = 0;
+        computerScore = 0;
+    }
 }
 
 // Create node list containing the three player choices
