@@ -59,16 +59,30 @@ function playRound(humanChoice, computerChoice) {
     const newP = document.createElement("p");
     // announces the winner and increments the score
     if (winner === 'human') {
+        // Removes last announcement if there was one
+        while (results.firstChild) {
+            results.removeChild(results.firstChild);
+        }
+        //
         results.appendChild(newP);
         newP.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
         humanScore++;
         humanScoreDisplay.textContent = `${humanScore}`;
     } else if (winner === 'computer') {
+        while (results.firstChild) {
+            results.removeChild(results.firstChild);
+        }
         results.appendChild(newP);
         newP.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
         computerScore++;
         computerScoreDisplay.textContent = `${computerScore}`;
     } else if (winner === 'tie') {
+        while (results.firstChild) {
+            results.removeChild(results.firstChild);
+        }
+        while (results.firstChild) {
+            results.removeChild(results.firstChild);
+        }
         results.appendChild(newP);
         newP.textContent = `It's a tie!`;
     }
