@@ -18,7 +18,13 @@ function getComputerChoice () {
 
 const results = document.querySelector("#Results");
 let humanScore = 0;
+const humanScoreDisplay = document.querySelector(".human-display");
+humanScoreDisplay.textContent = `${humanScore}`;
+
 let computerScore = 0;
+const computerScoreDisplay = document.querySelector(".computer-display");
+computerScoreDisplay.textContent = `${computerScore}`;
+
 
 function playRound(humanChoice, computerChoice) {
     let winner = 0;
@@ -55,11 +61,13 @@ function playRound(humanChoice, computerChoice) {
     if (winner === 'human') {
         results.appendChild(newP);
         newP.textContent = `You win! ${humanChoice} beats ${computerChoice}!`;
-        humanScore++;        
+        humanScore++;
+        humanScoreDisplay.textContent = `${humanScore}`;
     } else if (winner === 'computer') {
         results.appendChild(newP);
         newP.textContent = `You lose! ${computerChoice} beats ${humanChoice}!`;
         computerScore++;
+        computerScoreDisplay.textContent = `${computerScore}`;
     } else if (winner === 'tie') {
         results.appendChild(newP);
         newP.textContent = `It's a tie!`;
